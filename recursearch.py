@@ -18,5 +18,9 @@ def recursearch(L,k,begin,end):
             begin=mid+1
         elif L[mid]==k:
             return 1
+    if end-begin<0:
+        return 0
     return recursearch(L,k,begin,end)
 
+L=list(range(100000))
+print(recursearch(L,-1234,0,len(L)-1))
